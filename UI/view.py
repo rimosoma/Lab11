@@ -30,7 +30,13 @@ class View(ft.UserControl):
 
         #ROW with some controls
         # text field for the name
-        self._ddyear = ft.Dropdown(label="Anno")
+        self._ddyear = ft.Dropdown(
+            label="Anno",
+            options=[
+                ft.dropdown.Option(str(year)) for year in range(2015, 2026)
+            ]
+        )
+
         self._ddcolor = ft.Dropdown(label="Colore")
 
         # button for the "creat graph" reply
